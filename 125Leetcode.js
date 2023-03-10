@@ -20,11 +20,13 @@
 // Explanation: s is an empty string "" after removing non-alphanumeric characters.
 // Since an empty string reads the same forward and backward, it is a palindrome.
 
+
 /**
  * @param {string} s
  * @return {boolean}
  */
 var isPalindrome = function (s) {
+    let originalS = s.replace(/[\W]/g, "").toUpperCase()
     let newS = s.replace(/[\W_]/g, "").toUpperCase()
 
     let leftPointer = 0;
